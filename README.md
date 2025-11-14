@@ -1,5 +1,5 @@
 ````markdown
-# Hoja de Vida / Portafolio – Gabriel Argenis Medina Carrero
+Hoja de Vida / Portafolio – Gabriel Argenis Medina Carrero
 
 Aplicación web de hoja de vida (CV) y portafolio personal desarrollada para la materia **Tecnologías Web**, 7mo semestre, de la **Universidad Simón Bolívar – Sede Cúcuta**.
 
@@ -16,7 +16,7 @@ El sitio está construido usando únicamente **HTML, CSS y JavaScript**, e inclu
 
 ---
 
-## 🧩 Tecnologías utilizadas
+🧩 Tecnologías utilizadas
 
 - **HTML5** – Estructura del contenido.
 - **CSS3** – Estilos, layout y diseño responsive (media queries).
@@ -30,7 +30,7 @@ No se usan frameworks externos (sin React, sin Bootstrap), solo código puro par
 
 ---
 
-## 📂 Estructura del proyecto
+📂 Estructura del proyecto
 
 Versión básica (un solo archivo principal):
 
