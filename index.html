@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hoja de Vida - Gabriel Argenis Medina Carrero</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hoja de vida y portafolio de Gabriel Argenis Medina Carrero - Tecnólogo ADSI y estudiante de Ingeniería de Sistemas en la Universidad Simón Bolívar, sede Cúcuta." />
+  <style>
+    /* =========================
+       1. Variables y reset
+    ========================== */
+    :root {
+      --bg: #f5f5f7;
+      --bg-alt: #ffffff;
+      --text: #111827;
+      --text-muted: #6b7280;
+      --accent: #2563eb;
+      --accent-soft: rgba(37, 99, 235, 0.09);
+      --border: #e5e7eb;
+      --shadow-soft: 0 10px 25px rgba(15, 23, 42, 0.08);
+    }
+
+    body.dark {
+      --bg: #020617;
+      --bg-alt: #020617;
+      --text: #f9fafb;
+      --text-muted: #9ca3af;
+      --accent: #60a5fa;
+      --accent-soft: rgba(96, 165, 250, 0.16);
+      --border: #1f2937;
+      --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.7);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .app-shell {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* =========================
+       2. Header y navegación
+    ========================== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(12px);
+      background: color-mix(in srgb, var(--bg) 90%, transparent);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.8rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+
+    .brand-circle {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #60a5fa, #2563eb);
+      box-shadow: 0 0 0 3px var(--accent-soft);
+    }
+
+    .brand span:last-child {
+      opacity: 0.8;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      padding: 0.35rem 0.1rem;
+      border-radius: 0.4rem;
+      color: var(--text-muted);
+      transition: color 0.18s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .theme-toggle {
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      padding: 0.3rem 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: var(--bg-alt);
+      cursor: pointer;
+      font-size: 0.8rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .theme-toggle span.icon {
+      font-size: 1rem;
+    }
+
+    .theme-toggle span.label {
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .menu-btn {
+      display: none;
+    }
+
+    /* =========================
+       3. Layout general
+    ========================== */
+    main {
+      flex: 1;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 1.25rem 2rem;
+    }
+
+    @media (min-width: 900px) {
+      section {
+        padding: 4rem 1.25rem 3rem;
+      }
+    }
+
+    /* =========================
+       4. Inicio (Landing Page)
+    ========================== */
+    #inicio {
+      padding-top: 3.2rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    @media (min-width: 900px) {
+      .hero {
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2.6fr);
+      }
+    }
+
+    .hero-highlight {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.18rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent-soft);
+      background: var(--bg-alt);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-highlight span.icon {
+      font-size: 1rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.2rem, 4vw, 2.9rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.7rem;
+    }
+
+    .hero-title span.accent {
+      background: linear-gradient(120deg, var(--accent), #4f46e5);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      max-width: 34rem;
+      margin-bottom: 1.3rem;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.4rem;
+      font-size: 0.75rem;
+    }
+
+    .hero-tags span {
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
+      border-radius: 0.75rem;
+      padding: 0.6rem 1.25rem;
+      border: 1px solid transparent;
+      font-size: 0.9rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-weight: 500;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease,
+        border-color 0.12s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #4f46e5);
+      color: white;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(37, 99, 235, 0.35);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border-color: var(--border);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .hero-meta-item strong {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    .hero-card {
+      border-radius: 1.5rem;
+      background: radial-gradient(circle at 10% 0%, var(--accent-soft), transparent 55%);
+      border: 1px solid var(--border);
+      padding: 1.5rem 1.3rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent-soft);
+      font-size: 0.75rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-card p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+    }
+
+    /* =========================
+       5. Títulos de sección
+    ========================== */
+    .section-heading {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .section-eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .section-description {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      max-width: 30rem;
+    }
+
+    /* =========================
+       6. Acerca de mí
+    ========================== */
+    .about-grid {
+      display: grid;
+      gap: 2rem;
+    }
+
+    @media (min-width: 800px) {
+      .about-grid {
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
+      }
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.6rem;
+    }
+
+    .pill {
+      font-size: 0.75rem;
+      padding: 0.28rem 0.7rem;
+      border-radius: 999px;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+    }
+
+    .pill-strong {
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-color: transparent;
+    }
+
+    .about-subtitle {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin: 1.1rem 0 0.4rem;
+    }
+
+    .about-list {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    .about-list li + li {
+      margin-top: 0.35rem;
+    }
+
+    .timeline {
+      border-radius: 1.2rem;
+      padding: 1.3rem 1.2rem;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-soft);
+      max-height: 360px;
+      overflow: auto;
+      scroll-behavior: smooth;
+    }
+
+    .timeline-group-title {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .timeline-item + .timeline-item {
+      margin-top: 1rem;
+    }
+
+    .timeline-role {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .timeline-place {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 0.15rem;
+    }
+
+    .timeline-dates {
+      font-size: 0.75rem;
+      color: var(--accent);
+      margin-bottom: 0.3rem;
+    }
+
+    .timeline-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* =========================
+       7. Proyectos
+    ========================== */
+    .projects-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 720px) {
+      .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .project-card {
+      background: var(--bg-alt);
+      border-radius: 1.2rem;
+      border: 1px solid var(--border);
+      padding: 1.1rem 1.1rem 1rem;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .project-badge {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--accent);
+    }
+
+    .project-title {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .project-meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.25rem;
+      font-size: 0.7rem;
+    }
+
+    .project-tags span {
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    .project-link {
+      margin-top: 0.3rem;
+      font-size: 0.8rem;
+      color: var(--accent);
+    }
+
+    /* =========================
+       8. Contacto
+    ========================== */
+    .contact-grid {
+      display: grid;
+      gap: 2rem;
+    }
+
+    @media (min-width: 800px) {
+      .contact-grid {
+        grid-template-columns: minmax(0, 1.4fr) minmax(0, 2fr);
+        align-items: flex-start;
+      }
+    }
+
+    .contact-info {
+      font-size: 0.9rem;
+      background: var(--bg-alt);
+      border-radius: 1.2rem;
+      border: 1px solid var(--border);
+      padding: 1.2rem 1.1rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .contact-row + .contact-row {
+      margin-top: 0.7rem;
+    }
+
+    .contact-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+    }
+
+    .contact-value {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .contact-form {
+      background: var(--bg-alt);
+      border-radius: 1.2rem;
+      padding: 1.2rem 1.1rem 1.3rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .contact-form p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      margin-bottom: 0.9rem;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      margin-bottom: 0.9rem;
+      font-size: 0.85rem;
+    }
+
+    .field label {
+      font-weight: 500;
+    }
+
+    .field input,
+    .field textarea {
+      border-radius: 0.7rem;
+      border: 1px solid var(--border);
+      padding: 0.55rem 0.7rem;
+      background: transparent;
+      color: var(--text);
+      font: inherit;
+    }
+
+    .field textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .field input:focus,
+    .field textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px var(--accent-soft);
+    }
+
+    /* =========================
+       9. Footer
+    ========================== */
+    footer {
+      border-top: 1px solid var(--border);
+      margin-top: 2rem;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.4rem 1.25rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* =========================
+       10. Navegación móvil
+    ========================== */
+    @media (max-width: 680px) {
+      .nav-links {
+        position: fixed;
+        inset-inline: 1rem;
+        top: 60px;
+        border-radius: 1rem;
+        padding: 0.8rem 1rem;
+        background: var(--bg-alt);
+        border: 1px solid var(--border);
+        flex-direction: column;
+        align-items: flex-start;
+        box-shadow: var(--shadow-soft);
+        transform-origin: top center;
+        transform: scaleY(0.9);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.18s ease, transform 0.18s ease;
+      }
+
+      .nav-links.open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: scaleY(1);
+      }
+
+      .menu-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: var(--bg-alt);
+        cursor: pointer;
+        font-size: 1.1rem;
+      }
+
+      .theme-toggle {
+        padding: 0.3rem 0.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <!-- =======================
+         HEADER / NAVBAR
+    ======================== -->
+    <header>
+      <nav class="nav">
+        <div class="brand">
+          <div class="brand-circle"></div>
+          <span>Gabriel</span>
+          <span>Medina</span>
+        </div>
+
+        <div class="nav-right">
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar tema">
+            <span class="icon" id="theme-icon">🌙</span>
+            <span class="label" id="theme-label">Dark</span>
+          </button>
+
+          <button class="menu-btn" id="menu-btn" type="button" aria-label="Abrir menú">
+            ☰
+          </button>
+        </div>
+
+        <div class="nav-links" id="nav-links">
+          <a href="#inicio" class="nav-link active">Inicio</a>
+          <a href="#acerca" class="nav-link">Acerca de</a>
+          <a href="#proyectos" class="nav-link">Mis proyectos</a>
+          <a href="#contacto" class="nav-link">Contácteme</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- =======================
+           INICIO / LANDING PAGE
+      ======================== -->
+      <section id="inicio">
+        <div class="hero">
+          <div>
+            <div class="hero-highlight">
+              <span class="icon">💻</span>
+              <span>Portafolio · Hoja de vida</span>
+            </div>
+            <h1 class="hero-title">
+              Hola, soy <span class="accent">Gabriel Argenis Medina Carrero</span>.
+            </h1>
+            <p class="hero-subtitle">
+              Tecnólogo en Análisis y Desarrollo de Sistemas de Información y estudiante de Ingeniería de Sistemas (Universidad Simón Bolívar, sede Cúcuta). Me enfoco en desarrollo backend con Java/Spring Boot, soporte a usuarios, infraestructura y ciberseguridad.
+            </p>
+
+            <div class="hero-tags">
+              <span>Java · Spring Boot</span>
+              <span>HTML · CSS · JavaScript</span>
+              <span>Docker · MySQL</span>
+              <span>Redes · Soporte técnico</span>
+              <span>Fortinet · Ciberseguridad</span>
+            </div>
+
+            <div class="hero-actions">
+              <a href="#proyectos" class="btn btn-primary">
+                Ver mis proyectos
+              </a>
+              <!-- Ajusta esta ruta cuando subas tu PDF -->
+              <a href="assets/CV_Gabriel_Medina.pdf" class="btn btn-outline" target="_blank" rel="noopener">
+                Descargar CV en PDF
+              </a>
+            </div>
+
+            <div class="hero-meta">
+              <div class="hero-meta-item">
+                <strong>+2 años</strong>
+                Experiencia como auxiliar de sistemas y soporte técnico.
+              </div>
+              <div class="hero-meta-item">
+                <strong>Cúcuta, N. de Santander</strong>
+                Disponible para trabajo remoto / presencial.
+              </div>
+            </div>
+          </div>
+
+          <aside class="hero-card">
+            <div class="hero-chip">
+              <span>🎓</span>
+              <span>Formación y certificaciones</span>
+            </div>
+            <h3>Desarrollo, redes y ciberseguridad</h3>
+            <p>
+              Tecnólogo ADSI (SENA) y estudiante de Ingeniería de Sistemas. En formación como Tecnólogo en Gestión de Redes de Datos, con cursos en bases de datos, IoT, inglés y varias certificaciones Fortinet en ciberseguridad.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- =======================
+           ACERCA DE
+      ======================== -->
+      <section id="acerca">
+        <div class="section-heading">
+          <span class="section-eyebrow">Acerca de</span>
+          <h2 class="section-title">Sobre mí</h2>
+          <p class="section-description">
+            Un poco más sobre mi perfil, habilidades y trayectoria académica y laboral.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div>
+            <p>
+              Soy tecnólogo en Análisis y Desarrollo de Sistemas de Información y estudiante de Ingeniería de Sistemas, actualmente cursando la carrera en la Universidad Simón Bolívar (sede Cúcuta). Me gusta combinar desarrollo de software, redes y ciberseguridad, siempre con enfoque en soporte al usuario final y solución de problemas reales.
+            </p>
+            <p style="margin-top:0.7rem;">
+              He trabajado como auxiliar de sistemas, realizando mantenimiento y puesta a punto de equipos, configuración de cámaras de seguridad (CCTV), implementación de sistemas POS y acompañamiento a los usuarios en su día a día tecnológico.
+            </p>
+
+            <h3 class="about-subtitle">Lo que ofrezco</h3>
+            <ul class="about-list">
+              <li>✅ Soporte técnico y mantenimiento (hardware, software, CCTV, POS).</li>
+              <li>✅ Desarrollo de aplicaciones web con Java, Spring Boot y MySQL.</li>
+              <li>✅ Conocimientos en redes de datos y fundamentos de ciberseguridad.</li>
+              <li>✅ Trabajo en equipo bajo metodologías ágiles (Scrum).</li>
+              <li>✅ Buena comunicación, liderazgo y orientación al servicio.</li>
+            </ul>
+
+            <h3 class="about-subtitle">Tecnologías principales</h3>
+            <div class="pill-list">
+              <span class="pill pill-strong">Java · Spring Boot</span>
+              <span class="pill pill-strong">HTML · CSS · JS</span>
+              <span class="pill">MySQL · Bases de datos</span>
+              <span class="pill">Docker &amp; contenedores</span>
+              <span class="pill">Redes de datos</span>
+              <span class="pill">CCTV · POS</span>
+              <span class="pill">Git · GitHub</span>
+              <span class="pill">Fortinet Cybersecurity</span>
+            </div>
+          </div>
+
+          <aside class="timeline" aria-label="Experiencia y educación">
+            <div>
+              <div class="timeline-group-title">Experiencia</div>
+
+              <div class="timeline-item">
+                <div class="timeline-role">Auxiliar de Sistemas</div>
+                <div class="timeline-place">Trendi Detalles · Cúcuta, Colombia</div>
+                <div class="timeline-dates">Mar/2023 - Actualidad</div>
+                <p class="timeline-desc">
+                  Soporte a usuarios, mantenimiento y reparación de computadores, configuración y mantenimiento de CCTV, implementación de sistemas POS, gestión de inventario de equipos y software, copias de seguridad y actualizaciones.
+                </p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-role">Aprendiz SENA · Auxiliar de Sistemas</div>
+                <div class="timeline-place">Distribuciones Punto y Fama S.A.S</div>
+                <div class="timeline-dates">Jul/2022 - Ene/2023</div>
+                <p class="timeline-desc">
+                  Apoyo en el área de sistemas durante la etapa productiva: soporte técnico, instalación de equipos, atención a usuarios y seguimiento a tareas asignadas por el área de tecnología.
+                </p>
+              </div>
+            </div>
+
+            <div style="margin-top:1.2rem;">
+              <div class="timeline-group-title">Educación & Certificaciones</div>
+
+              <div class="timeline-item">
+                <div class="timeline-role">Ingeniería de Sistemas</div>
+                <div class="timeline-place">Universidad Simón Bolívar · Sede Cúcuta</div>
+                <div class="timeline-dates">En curso</div>
+                <p class="timeline-desc">
+                  Formación profesional en ingeniería de sistemas, con énfasis en desarrollo, redes, gestión de proyectos y seguridad informática.
+                </p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-role">Tecnólogo en ADSI</div>
+                <div class="timeline-place">SENA</div>
+                <div class="timeline-dates">2023</div>
+                <p class="timeline-desc">
+                  Tecnología en Análisis y Desarrollo de Sistemas de Información, con enfoque en programación, análisis, diseño y construcción de soluciones de software.
+                </p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-role">Tecnólogo en Gestión de Redes de Datos (en curso)</div>
+                <div class="timeline-place">SENA</div>
+                <div class="timeline-dates">2025 - 2027</div>
+                <p class="timeline-desc">
+                  Formación en redes de datos, infraestructura y servicios de comunicación para soportar soluciones de TI.
+                </p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-role">Certificaciones Fortinet & cursos SENA</div>
+                <div class="timeline-place">Fortinet · SENA</div>
+                <div class="timeline-dates">2020 - 2025</div>
+                <p class="timeline-desc">
+                  Fortinet Certified Fundamentals in Cybersecurity, cursos de introducción a ciberseguridad, bases de datos, IoT, inglés y más.
+                </p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- =======================
+           PROYECTOS
+      ======================== -->
+      <section id="proyectos">
+        <div class="section-heading">
+          <span class="section-eyebrow">Mis proyectos</span>
+          <h2 class="section-title">Proyectos y prácticas</h2>
+          <p class="section-description">
+            Algunos proyectos académicos y personales que representan mi perfil como desarrollador y auxiliar de sistemas.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-badge">Proyecto académico · Ingeniería</div>
+            <h3 class="project-title">Hestia PMS – Sistema de gestión hotelera</h3>
+            <p class="project-meta">
+              Plataforma para administrar reservas, huéspedes y habitaciones de un hotel, diseñada como proyecto de ingeniería.
+            </p>
+            <div class="project-tags">
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>MySQL</span>
+              <span>Docker</span>
+            </div>
+            <div class="project-link">
+              Código en GitHub (cuando el repositorio sea público, puedes enlazarlo aquí).
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-badge">Proyecto académico</div>
+            <h3 class="project-title">Plataforma de agencia de viajes</h3>
+            <p class="project-meta">
+              Aplicación web para cotizar y gestionar planes de viaje, con listado de destinos, formulario de contacto y exportes básicos.
+            </p>
+            <div class="project-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="project-link">
+              Ideal para mostrar navegación, formularios y diseño responsive.
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-badge">Proyecto personal</div>
+            <h3 class="project-title">EcoMarket – Gestión de inventario</h3>
+            <p class="project-meta">
+              Prototipo de sistema para administrar productos, categorías y stock de un pequeño comercio.
+            </p>
+            <div class="project-tags">
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>MySQL</span>
+              <span>APIs</span>
+            </div>
+            <div class="project-link">
+              Pensado para correr en entornos locales o contenedores.
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-badge">Infraestructura & Redes</div>
+            <h3 class="project-title">Laboratorios de ciberseguridad y redes</h3>
+            <p class="project-meta">
+              Prácticas con FortiGate, configuración de VPN, reglas de firewall, políticas de seguridad y pruebas de conectividad en entornos de laboratorio.
+            </p>
+            <div class="project-tags">
+              <span>Fortinet</span>
+              <span>Redes</span>
+              <span>Ciberseguridad</span>
+            </div>
+            <div class="project-link">
+              Complemento perfecto a mi perfil de desarrollo y soporte.
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =======================
+           CONTACTO
+      ======================== -->
+      <section id="contacto">
+        <div class="section-heading">
+          <span class="section-eyebrow">Contácteme</span>
+          <h2 class="section-title">Hablemos</h2>
+          <p class="section-description">
+            Si quieres que trabajemos juntos o necesitas soporte en sistemas, puedes escribirme por correo, teléfono o usando el formulario.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <aside class="contact-info">
+            <div class="contact-row">
+              <div class="contact-label">Ubicación</div>
+              <div class="contact-value">Cúcuta, Norte de Santander · Colombia</div>
+            </div>
+
+            <div class="contact-row">
+              <div class="contact-label">Teléfonos</div>
+              <div class="contact-value">
+                +57 312 455 5260<br />
+                +57 312 313 7046
+              </div>
+            </div>
+
+            <div class="contact-row">
+              <div class="contact-label">Correo</div>
+              <div class="contact-value">
+                <a href="mailto:gabrielargenismedinacarrero@gmail.com">
+                  gabrielargenismedinacarrero@gmail.com
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-row">
+              <div class="contact-label">GitHub</div>
+              <div class="contact-value">
+                <a href="https://github.com/GabitoMIX" target="_blank" rel="noopener">
+                  github.com/GabitoMIX
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-row">
+              <div class="contact-label">Perfil</div>
+              <div class="contact-value">
+                Tecnólogo ADSI · Estudiante de Ingeniería de Sistemas · Soporte técnico &amp; desarrollo.
+              </div>
+            </div>
+          </aside>
+
+          <form class="contact-form" id="contact-form">
+            <p>
+              Este formulario es solo demostrativo para la materia de Tecnologías Web. Para contactarme de verdad, puedes usar mi correo o WhatsApp.
+            </p>
+
+            <div class="field">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+            </div>
+
+            <div class="field">
+              <label for="correo">Correo</label>
+              <input type="email" id="correo" name="correo" placeholder="tunombre@correo.com" required />
+            </div>
+
+            <div class="field">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
+            </div>
+
+            <button class="btn btn-primary" type="submit">
+              Enviar mensaje (demo)
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- =======================
+         FOOTER
+    ======================== -->
+    <footer>
+      <div class="footer-inner">
+        <span>© <span id="year"></span> Gabriel Argenis Medina Carrero.</span>
+        <span>Hecho con HTML, CSS y JavaScript para la materia de Tecnologías Web.</span>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // =========================
+    // 1. Tema Dark / Light
+    // =========================
+    const body = document.body;
+    const themeToggle = document.getElementById("theme-toggle");
+    const themeIcon = document.getElementById("theme-icon");
+    const themeLabel = document.getElementById("theme-label");
+
+    function applyTheme(theme) {
+      if (theme === "dark") {
+        body.classList.add("dark");
+        themeIcon.textContent = "☀️";
+        themeLabel.textContent = "Light";
+      } else {
+        body.classList.remove("dark");
+        themeIcon.textContent = "🌙";
+        themeLabel.textContent = "Dark";
+      }
+      localStorage.setItem("gm-theme", theme);
+    }
+
+    function initTheme() {
+      const saved = localStorage.getItem("gm-theme");
+      if (saved === "dark" || saved === "light") {
+        applyTheme(saved);
+      } else {
+        // opción: tema según preferencia del sistema
+        const prefersDark = window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        applyTheme(prefersDark ? "dark" : "light");
+      }
+    }
+
+    themeToggle.addEventListener("click", () => {
+      const current = body.classList.contains("dark") ? "dark" : "light";
+      applyTheme(current === "dark" ? "light" : "dark");
+    });
+
+    initTheme();
+
+    // =========================
+    // 2. Navegación / scroll
+    // =========================
+    const navLinks = document.querySelectorAll(".nav-link");
+    const sections = Array.from(document.querySelectorAll("main section"));
+    const menuBtn = document.getElementById("menu-btn");
+    const navLinksContainer = document.getElementById("nav-links");
+
+    function setActiveLinkOnScroll() {
+      const scrollY = window.scrollY;
+      let currentId = "inicio";
+
+      sections.forEach((sec) => {
+        const offsetTop = sec.offsetTop - 120;
+        if (scrollY >= offsetTop) {
+          currentId = sec.id;
+        }
+      });
+
+      navLinks.forEach((link) => {
+        if (link.getAttribute("href") === "#" + currentId) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", setActiveLinkOnScroll);
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        // cerrar menú en móvil al hacer clic
+        navLinksContainer.classList.remove("open");
+      });
+    });
+
+    menuBtn.addEventListener("click", () => {
+      navLinksContainer.classList.toggle("open");
+    });
+
+    // =========================
+    // 3. Formulario de contacto (demo)
+    // =========================
+    const contactForm = document.getElementById("contact-form");
+
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert(
+        "Este formulario es solo demostrativo para la clase.\n\nPara contactarme realmente, puedes escribir a:\n\n" +
+        "📧 gabrielargenismedinacarrero@gmail.com\n📱 WhatsApp: +57 312 455 5260"
+      );
+      contactForm.reset();
+    });
+
+    // =========================
+    // 4. Año actual en footer
+    // =========================
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
