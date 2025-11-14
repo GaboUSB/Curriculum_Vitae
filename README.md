@@ -1,4 +1,4 @@
-````markdown
+
 Hoja de Vida / Portafolio – Gabriel Argenis Medina Carrero
 
 Aplicación web de hoja de vida (CV) y portafolio personal desarrollada para la materia **Tecnologías Web**, 7mo semestre, de la **Universidad Simón Bolívar – Sede Cúcuta**.
