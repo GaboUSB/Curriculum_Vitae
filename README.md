@@ -157,7 +157,3 @@ Universidad Simón Bolívar – Sede Cúcuta
 * 📍 Cúcuta, Norte de Santander – Colombia
 * 📧 [gabrielargenismedinacarrero@gmail.com](mailto:gabrielargenismedinacarrero@gmail.com)
 * 🐙 GitHub: [github.com/GabitoMIX](https://github.com/GabitoMIX)
-
-```
-::contentReference[oaicite:0]{index=0}
-```
