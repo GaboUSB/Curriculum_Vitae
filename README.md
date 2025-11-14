@@ -1,4 +1,4 @@
-
+````markdown
 # Hoja de Vida / Portafolio – Gabriel Argenis Medina Carrero
 
 Aplicación web de hoja de vida (CV) y portafolio personal desarrollada para la materia **Tecnologías Web**, 7mo semestre, de la **Universidad Simón Bolívar – Sede Cúcuta**.
@@ -82,6 +82,8 @@ https://TU_USUARIO.github.io/NOMBRE_DEL_REPOSITORIO/
 
 Ahí se podrá ver la aplicación funcionando como sitio web.
 
+---
+
 ## 🧭 Secciones de la app
 
 * **Inicio (Landing Page)**
@@ -110,6 +112,8 @@ Ahí se podrá ver la aplicación funcionando como sitio web.
   * GitHub.
     Incluye un formulario de contacto **modo demostración** (muestra un `alert` y no envía datos reales).
 
+---
+
 ## 🎨 Funcionalidades destacadas
 
 ### 🌙 / ☀️ Modo Dark / Light
@@ -128,6 +132,8 @@ Ahí se podrá ver la aplicación funcionando como sitio web.
 
   * En pantallas pequeñas el menú se colapsa en un botón tipo hamburguesa (☰).
 
+---
+
 ## 👨‍🎓 Contexto académico
 
 Este proyecto fue desarrollado como ejercicio práctico para:
@@ -140,6 +146,8 @@ Este proyecto fue desarrollado como ejercicio práctico para:
 * Crear una **hoja de vida interactiva** y usable como portafolio personal.
 * Publicar el resultado usando **GitHub Pages**.
 
+---
+
 ## ✏️ Autor
 
 **Gabriel Argenis Medina Carrero**
@@ -149,3 +157,7 @@ Universidad Simón Bolívar – Sede Cúcuta
 * 📍 Cúcuta, Norte de Santander – Colombia
 * 📧 [gabrielargenismedinacarrero@gmail.com](mailto:gabrielargenismedinacarrero@gmail.com)
 * 🐙 GitHub: [github.com/GabitoMIX](https://github.com/GabitoMIX)
+
+```
+::contentReference[oaicite:0]{index=0}
+```
